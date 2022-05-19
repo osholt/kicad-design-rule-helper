@@ -2,12 +2,12 @@
 
 #create temporary envirronemtnal variables for 
 
-export VERSION="0.0.2"
+export VERSION="0.0.1"
 export STATUS="stable"
 export KICAD_VERSION="6.0"
-export RELEASE_URL_BASE="https://github.com/osholt/kicad-test-plugin/releases/download/v"
+export RELEASE_URL_BASE="https://github.com/osholt/kicad-design-rule-helper/releases/download/v"
 export RELEASE_ARCHIVE_NAME="Archive.zip"
-export UNIQUE_IDENTIFIER="com.github.osholt.test"
+export UNIQUE_IDENTIFIER="com.github.osholt.design-rule-helper"
 export METADATA_REPO="https://github.com/osholt/kicad-plugin-repo-metadata"
 export REPO="https://github.com/osholt/kicad-plugin-repo"
 
