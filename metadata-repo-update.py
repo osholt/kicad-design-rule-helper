@@ -7,6 +7,7 @@ import requests
 import logging
 from datetime import datetime
 import zipfile
+import shutil
 
 
 READ_SIZE = 65536
@@ -63,8 +64,12 @@ def update(jd: dict, file: str) -> bool:
     jd["install_size"] = instsize
     return True
 
+try:   
+    metadata = load_json_file("metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json")
+except:
+    shutil.copyfile("metadata.json", "metadata/packages/"+UNIQUE_IDENTIFIER+"/")
+    metadata = load_json_file("metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json")
 
-metadata = load_json_file("metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json")
 
 numberOfVersions = len(metadata["versions"])
 entryToUpdate = 0
