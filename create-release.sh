@@ -38,6 +38,7 @@ fi
 git clone $METADATA_REPO metadata --quiet
 python3 metadata-repo-update.py
 cd metadata
+git add "packages/$UNIQUE_IDENTIFIER/"
 git commit -a -m "Automated update" --quiet
 git push --quiet
 cd ..
