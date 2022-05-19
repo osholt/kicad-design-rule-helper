@@ -68,7 +68,7 @@ try:
     metadata = load_json_file("metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json")
 except:
     os.makedirs(os.path.dirname("metadata/packages/"+UNIQUE_IDENTIFIER+"/"), exist_ok=True)
-    shutil.copyfile("metadata.json", "metadata/packages/"+UNIQUE_IDENTIFIER+"/")
+    shutil.copyfile("metadata.json", "metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json")
     metadata = load_json_file("metadata/packages/"+UNIQUE_IDENTIFIER+"/metadata.json")
 
 
